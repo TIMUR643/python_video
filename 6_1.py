@@ -1,24 +1,21 @@
-print('Игра "Загадай число от 0 до 100"')
-
-user_number = int(input('Введите число'))
-try_comp_number = None
-
-user_higher = ">"
-user_lower = "<"
-user_answer = None
-
 import random
-min = 1
-max = 100
 
-while user_number != try_comp_number:
-    try_comp_number = int(random.randint(min, max))
-if try_comp_number == user_number:
-    print('Компьютер догадался. Ваше число: ', try_comp_number)
+main_number = int(input('Загадай число (от 1 до 100):'))
+comp_number = 0
+max_number = 100;
+min_number = 1;
+
+comp_number = random.randint(min_number, max_number)
+while main_number != comp_number:
+    print("Это ваше число?", comp_number)
+    main_decision = input("Вы загадали больше/меньше? (Введите '>' или '<')")
+    if main_decision == ">":
+            min_number = comp_number + 1
+            comp_number = random.randint(min_number, max_number)
+    elif main_decision == "<":
+            max_number = comp_number - 1
+            comp_number = random.randint(min_number, max_number)
+    elif main_decision == "=":
+            comp_number = main_number
 else:
-    print('Ваше число больше или меньше: ', try_comp_number, '? (используйте клавиши > или <)')
-user_answer = input()
-if user_answer == user_lower:
-    max = try_comp_number
-elif user_answer == user_higher:
-    min = try_comp_number
+    print("Ваше число: ", comp_number,'   Угадал!')
