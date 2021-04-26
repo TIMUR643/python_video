@@ -1,10 +1,10 @@
 import random
 
-player_name = input('Your enemy is Ghost. Enter player name: ')
+player_name = input('Ваше имя: ')
 
 while True:
     if player_name == "Ghost":
-        player_name = input('Your name is the same as enemy name. Enter another player name: ')
+        player_name = input('Это имя врага.Попробуй другое: ')
     else:
         break
 
