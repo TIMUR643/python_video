@@ -1,14 +1,14 @@
 def get_info(name, age, city):
-    result = f'{name}, {age} years, lives in {city} city'
+    result = '{name}, {age} лет, живет в {city}'
     return result
 
-name = input('Enter name: ')
+name = input('Как вас зовут?: ')
 
 while True:
-    age = int(input('Enter age: '))
+    age = int(input('Сколько вам лет?: '))
     if age >= 0:
         break
 
-city = input('Enter city: ')
+city = input('Где вы живете?: ')
 
 print(get_info(name, age, city))
