@@ -1,9 +1,8 @@
-def find_max(num1, num2, num3):
-    result = max(a, b, c)
-    return result
+def max_number():
+    numbers = []
+    for i in range(3):
+        num = int(input("Введите число: "))
+        numbers.append(num)
+    return max(numbers)
 
-a = int(input('Enter number 1: '))
-b = int(input('Enter number 2: '))
-c = int(input('Enter number 3: '))
-
-print(find_max(a, b, c))
+print(max_number())
